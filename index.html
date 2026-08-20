@@ -1,266 +1,643 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Future Academy - An interactive educational platform for students to learn, track progress, and engage with a community">
-    <title>Future Academy - Home</title>
+    <meta name="description" content="Future Academy in Isuapur offers focused coaching for Class 8th to 12th in Mathematics and Science, 10th & 12th Board Crash Courses, ITI & Polytechnic preparation under Nawlesh Sir.">
+    <meta name="keywords" content="Future Academy, Nawlesh Sir, Isuapur Coaching, Mathematics Coaching, Science Coaching, BSEB Bihar Board, CBSE 10th 12th, Board Crash Course, ITI, Polytechnic">
+    <meta name="author" content="Future Academy">
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Future Academy | Excellence in Mathematics & Science Coaching">
+    <meta property="og:description" content="Quality coaching for Class 8th–12th students in Mathematics and Science, 10th & 12th Board Crash Courses, ITI & Polytechnic. Guided by Nawlesh Sir in Isuapur, Bihar.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/nawleshsir.jpg">
+
+    <title>Future Academy | Excellence in Mathematics &amp; Science Coaching - Isuapur</title>
+
+    <!-- Brand Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/pages/home.css">
-    <link rel="stylesheet" href="css/darkmode.css">
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body>
-    <!-- Modern Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-left">
-                <a href="https://webstar-vishalgupta.github.io/Future-Academy/" class="logo">Future Academy</a>
-                <a href="login.html" class="login-btn">Log In</a>
-            </div>
-            <div class="nav-right">
-                <button class="mobile-menu-btn">
+
+    <!-- 1. Navigation Bar -->
+    <nav class="navbar" id="navbar" aria-label="Main Navigation">
+        <div class="container nav-container">
+            <!-- Brand Identity -->
+            <a href="index.html" class="brand-logo" aria-label="Future Academy Home">
+                <div class="brand-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="brand-text">Future<span>Academy</span></div>
+            </a>
+
+            <!-- Navigation Links -->
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#courses" class="nav-link">Courses</a></li>
+                <li><a href="#why-us" class="nav-link">Why Us</a></li>
+                <li><a href="#faculty" class="nav-link">Faculty</a></li>
+                <li><a href="#learning-hub" class="nav-link">Learning Hub</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <!-- Navigation Actions (Theme Toggle & CTA) -->
+            <div class="nav-actions">
+                <button type="button" class="theme-toggle-btn" id="theme-toggle" aria-label="Switch theme">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+
+                <a href="#contact" class="btn btn-primary btn-sm">
+                    <i class="fas fa-paper-plane"></i> Contact Us
+                </a>
+
+                <button type="button" class="mobile-toggle-btn" id="mobile-toggle-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
                     <i class="fas fa-bars"></i>
                 </button>
-                <div class="nav-links">
-                    <a href="index.html" class="nav-link active">Home</a>
-                    <a href="study-materials.html" class="nav-link">Study Materials</a>
-                    <a href="classes.html" class="nav-link">Classes</a>
-                    <a href="contact.html" class="nav-link">Contact Us</a>
-                    <a href="forum.html" class="nav-link">Community Forums</a>
-                    <a href="about-developer.html" class="nav-link">About Developer</a>
-                    <div class="theme-toggle">
-                        <input type="checkbox" id="dark-mode-toggle">
-                        <label for="dark-mode-toggle">
-                            <i class="fas fa-sun"></i>
-                            <i class="fas fa-moon"></i>
-                        </label>
-                    </div>
-                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Welcome to Future Academy</h1>
-                <p>Your gateway to interactive learning and academic excellence. Join us to unlock your full potential and achieve your educational goals.</p>
-                <div class="hero-buttons">
-                    <a href="#features" class="hero-btn primary-btn">Explore Features</a>
-                    <a href="study-materials.html" class="hero-btn secondary-btn">Start Learning</a>
+    <!-- 2. Hero Section -->
+    <header class="hero-section" id="home">
+        <div class="container hero-grid">
+            <!-- Hero Left Content -->
+            <div class="hero-content reveal-on-scroll">
+                <div class="hero-badge">
+                    <i class="fas fa-star"></i> Admissions Open &bull; Class 8th to 12th
+                </div>
+                
+                <h1 class="hero-title">
+                    Empowering Academic Excellence in <span class="text-gradient">Mathematics &amp; Science</span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    Welcome to <strong>Future Academy</strong>. We provide rigorous, concept-driven coaching and dedicated mentorship for Class 8th–12th students across <strong>BSEB and CBSE</strong> boards in Isuapur, along with specialized <strong>Board Crash Courses</strong>, <strong>ITI</strong>, and <strong>Polytechnic</strong> guidance.
+                </p>
+
+                <div class="hero-ctas">
+                    <a href="#courses" class="btn btn-primary btn-lg">
+                        <i class="fas fa-book-open"></i> Explore Courses
+                    </a>
+                    <a href="https://wa.me/919309323018" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+
+                <div class="hero-trust-row">
+                    <a href="https://maps.app.goo.gl/1eFw1gsszNsvboUR7?g_st=ac" target="_blank" rel="noopener noreferrer" class="trust-item" title="Open Google Maps Location">
+                        <i class="fas fa-location-dot"></i>
+                        <span>1st Floor, Isuapur Bajar</span>
+                    </a>
+                    <div class="trust-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>BSEB &amp; CBSE (8th–12th)</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>10+ Yrs Mentorship</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Concept-First Pedagogy</span>
+                    </div>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="images/hero-education.svg" alt="Students learning online" style="max-width: 100%; height: auto;">
+
+            <!-- Hero Right Visual (Modern STEM & Education SVG Illustration) -->
+            <div class="hero-visual reveal-on-scroll">
+                <div class="hero-illustration-box">
+                    <img src="images/hero-illustration.svg" alt="Future Academy Mathematics, Science and STEM Learning" class="hero-illustration-img">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. Key Highlights / Trust Pillars -->
+    <section class="section section-subtle" id="highlights">
+        <div class="container">
+            <div class="highlights-grid">
+                <div class="highlight-card reveal-on-scroll">
+                    <div class="highlight-icon-box">
+                        <i class="fas fa-chalkboard-user"></i>
+                    </div>
+                    <h3>Class 8th to 12th Coaching</h3>
+                    <p>Comprehensive and structured syllabus coverage designed specifically for Class 8th, 9th, 10th, 11th, and 12th academic success.</p>
+                </div>
+
+                <div class="highlight-card reveal-on-scroll">
+                    <div class="highlight-icon-box">
+                        <i class="fas fa-file-signature"></i>
+                    </div>
+                    <h3>BSEB &amp; CBSE Alignment</h3>
+                    <p>Curriculum tailored to state and central board examination patterns, model papers, and previous year questions.</p>
+                </div>
+
+                <div class="highlight-card reveal-on-scroll">
+                    <div class="highlight-icon-box">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Concept-First Learning</h3>
+                    <p>Focusing on fundamental logic, deep understanding, and systematic problem solving rather than passive memorization.</p>
+                </div>
+
+                <div class="highlight-card reveal-on-scroll">
+                    <div class="highlight-icon-box">
+                        <i class="fas fa-location-dot"></i>
+                    </div>
+                    <h3>Isuapur Center &amp; Online Hub</h3>
+                    <p>Located on the 1st Floor, Isuapur Bajar (Near KYP), offering in-person classroom mentoring with video lectures on our official YouTube channel.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="features-container">
-            <div class="section-title">
-                <h2>What We Offer</h2>
-                <p>Discover our comprehensive suite of learning tools and resources designed to enhance your educational journey.</p>
+    <!-- 4. Academic Courses & Offerings Section -->
+    <section class="section" id="courses">
+        <div class="container">
+            <div class="section-header reveal-on-scroll">
+                <div class="section-badge">Academic Curriculum</div>
+                <h2 class="section-title">Courses Designed for Top Performance</h2>
+                <p class="section-description">Every batch is carefully paced with theoretical clarity, numerical problem sets, and rigorous testing.</p>
             </div>
-            <div class="features-grid">
-                <!-- <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-home"></i>
+
+            <!-- Group A: School Curriculum (Class 8th–12th) -->
+            <div class="courses-category-header reveal-on-scroll">
+                <h3 class="courses-category-title">
+                    <i class="fas fa-school"></i> School Education &bull; Class 8th to 12th
+                </h3>
+                <span class="courses-category-badge">BSEB &amp; CBSE</span>
+            </div>
+
+            <div class="courses-grid">
+                <!-- Course 1: Foundation (8th, 9th & 10th) -->
+                <div class="course-card reveal-on-scroll">
+                    <div class="course-card-top">
+                        <div class="course-badge-row">
+                            <span class="course-level">Foundation</span>
+                            <span class="course-board">BSEB / CBSE</span>
+                        </div>
+                        <h3 class="course-title">Secondary Math &amp; Science (8th, 9th &amp; 10th)</h3>
+                        <p class="course-desc">Build strong academic fundamentals in Mathematics and Science to achieve top grades in your school and Matric / Class 10 Board exams.</p>
+                        
+                        <ul class="course-topics">
+                            <li><i class="fas fa-check"></i> Linear Equations, Polynomials &amp; Geometry</li>
+                            <li><i class="fas fa-check"></i> Physics Fundamentals &amp; Chemical Reactions</li>
+                            <li><i class="fas fa-check"></i> Step-by-Step NCERT &amp; State Textbook Solutions</li>
+                            <li><i class="fas fa-check"></i> Regular Chapter-wise Assessment Tests</li>
+                        </ul>
                     </div>
-                    <h3>Home</h3>
-                    <p>Welcome to Future Academy - Your gateway to interactive learning and academic excellence.</p>
-                    <a href="index.html" class="material-action">Explore Home <i class="fas fa-arrow-right"></i></a>
-                </div> -->
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-book-open"></i>
+
+                    <div class="course-footer">
+                        <div class="course-faculty">
+                            <i class="fas fa-user-check"></i> Nawlesh Sir
+                        </div>
+                        <a href="#contact" class="btn btn-secondary btn-sm">Inquire Batch</a>
                     </div>
-                    <h3>Study Materials</h3>
-                    <p>Access a comprehensive library of lessons, notes, and resources organized by subject.</p>
-                    <a href="study-materials.html" class="material-action">Browse Materials <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                    </div>
-                    <h3>Classes</h3>
-                    <p>Join interactive online classes with expert instructors and real-time learning sessions.</p>
-                    <a href="classes.html" class="material-action">View Classes <i class="fas fa-arrow-right"></i></a>
-                </div>
-               
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Community Forums</h3>
-                    <p>Join discussions, ask questions, and connect with peers in our interactive community.</p>
-                    <a href="forum.html" class="material-action">Join Discussion <i class="fas fa-arrow-right"></i></a>
                 </div>
 
-                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-envelope"></i>
+                <!-- Course 2: Advanced Math (11th & 12th) -->
+                <div class="course-card reveal-on-scroll">
+                    <div class="course-card-top">
+                        <div class="course-badge-row">
+                            <span class="course-level">Intermediate</span>
+                            <span class="course-board">Class 11 &amp; 12</span>
+                        </div>
+                        <h3 class="course-title">Higher Mathematics (11th &amp; 12th)</h3>
+                        <p class="course-desc">Master higher secondary mathematics with an intensive focus on Calculus, Algebra, and Coordinate Geometry for board exams.</p>
+                        
+                        <ul class="course-topics">
+                            <li><i class="fas fa-check"></i> Differential &amp; Integral Calculus in Depth</li>
+                            <li><i class="fas fa-check"></i> Matrices, Determinants &amp; Vectors</li>
+                            <li><i class="fas fa-check"></i> Trigonometry &amp; Coordinate Geometry</li>
+                            <li><i class="fas fa-check"></i> 10-Year Previous Questions (PYQ) Mastery</li>
+                        </ul>
                     </div>
-                    <h3>Contact Us</h3>
-                    <p>Get in touch with our team for support, questions, or to learn more about our programs.</p>
-                    <a href="contact.html" class="material-action">Contact Us <i class="fas fa-arrow-right"></i></a>
+
+                    <div class="course-footer">
+                        <div class="course-faculty">
+                            <i class="fas fa-user-check"></i> Nawlesh Sir
+                        </div>
+                        <a href="#contact" class="btn btn-secondary btn-sm">Inquire Batch</a>
+                    </div>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-chalkboard-teacher"></i>
+                <!-- Course 3: Science / Physics (11th & 12th) -->
+                <div class="course-card reveal-on-scroll">
+                    <div class="course-card-top">
+                        <div class="course-badge-row">
+                            <span class="course-level">Intermediate</span>
+                            <span class="course-board">Class 11 &amp; 12</span>
+                        </div>
+                        <h3 class="course-title">Physics &amp; Science Core (11th &amp; 12th)</h3>
+                        <p class="course-desc">Clear scientific principles and develop confident numerical solving abilities across core intermediate physics concepts.</p>
+                        
+                        <ul class="course-topics">
+                            <li><i class="fas fa-check"></i> Mechanics, Motion, Work &amp; Energy</li>
+                            <li><i class="fas fa-check"></i> Electrostatics, Magnetism &amp; Current</li>
+                            <li><i class="fas fa-check"></i> Optics &amp; Modern Physics Principles</li>
+                            <li><i class="fas fa-check"></i> Practical Numerical &amp; Formula Worksheets</li>
+                        </ul>
                     </div>
-                    <h3>Meet Your Teacher</h3>
-                    <p>Get to know our experienced teachers and their teaching philosophies.</p>
-                    <a href="teachers.html" class="material-action">Meet Teachers <i class="fas fa-arrow-right"></i></a>
+
+                    <div class="course-footer">
+                        <div class="course-faculty">
+                            <i class="fas fa-user-check"></i> Nawlesh Sir
+                        </div>
+                        <a href="#contact" class="btn btn-secondary btn-sm">Inquire Batch</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Group B: Board Crash Courses & Career Offerings -->
+            <div class="courses-category-header reveal-on-scroll">
+                <h3 class="courses-category-title">
+                    <i class="fas fa-bolt"></i> Board Crash Courses &amp; Career Programs
+                </h3>
+                <span class="courses-category-badge">Special Batches</span>
+            </div>
+
+            <div class="courses-grid">
+                <!-- Course 4: 10th Board Crash Course -->
+                <div class="course-card featured-course reveal-on-scroll">
+                    <div class="course-card-top">
+                        <div class="course-badge-row">
+                            <span class="course-level course-badge-crash">Crash Course</span>
+                            <span class="course-board">Class 10 Board</span>
+                        </div>
+                        <h3 class="course-title">10th Board Crash Course</h3>
+                        <p class="course-desc">Targeted crash course specifically tailored for students preparing for their upcoming Class 10 board examinations (BSEB &amp; CBSE).</p>
+                        
+                        <ul class="course-topics">
+                            <li><i class="fas fa-check"></i> High-Yield Chapter Revision in Math &amp; Science</li>
+                            <li><i class="fas fa-check"></i> Previous 10 Years Question (PYQ) Problem Drills</li>
+                            <li><i class="fas fa-check"></i> Board Model Papers &amp; Guess Questions</li>
+                            <li><i class="fas fa-check"></i> Exam Time-Management &amp; Answer Writing Tips</li>
+                        </ul>
+                    </div>
+
+                    <div class="course-footer">
+                        <div class="course-faculty">
+                            <i class="fas fa-user-check"></i> Nawlesh Sir
+                        </div>
+                        <a href="#contact" class="btn btn-primary btn-sm">Inquire Batch</a>
+                    </div>
                 </div>
 
-                <!-- <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
+                <!-- Course 5: 12th Board Crash Course -->
+                <div class="course-card featured-course reveal-on-scroll">
+                    <div class="course-card-top">
+                        <div class="course-badge-row">
+                            <span class="course-level course-badge-crash">Crash Course</span>
+                            <span class="course-board">Class 12 Board</span>
+                        </div>
+                        <h3 class="course-title">12th Board Crash Course</h3>
+                        <p class="course-desc">Intensive crash program focused specifically on Class 12 board examination preparation, high-weightage topics, and numerical mastery.</p>
+                        
+                        <ul class="course-topics">
+                            <li><i class="fas fa-check"></i> Rapid Calculus &amp; Algebra Formula Revisions</li>
+                            <li><i class="fas fa-check"></i> Key Physics Derivations &amp; Numerical Solving</li>
+                            <li><i class="fas fa-check"></i> Board Model Questions &amp; Test Series</li>
+                            <li><i class="fas fa-check"></i> Scoring Strategies for Maximum Marks</li>
+                        </ul>
                     </div>
-                    <h3>Track Progress</h3>
-                    <p>Monitor your learning journey with detailed progress tracking and performance analytics.</p>
-                </div> -->
 
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-user-plus"></i>
+                    <div class="course-footer">
+                        <div class="course-faculty">
+                            <i class="fas fa-user-check"></i> Nawlesh Sir
+                        </div>
+                        <a href="#contact" class="btn btn-primary btn-sm">Inquire Batch</a>
                     </div>
-                    <h3>Register Yourself as a Student </h3>
-                    <p>Join our academic community by registering as a student and start your learning journey.</p>
-                    <a href="register-student.html" class="feature-link">Register Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Course 6: Polytechnic -->
+                <div class="course-card reveal-on-scroll">
+                    <div class="course-card-top">
+                        <div class="course-badge-row">
+                            <span class="course-level">Career / Entrance</span>
+                            <span class="course-board">Entrance Exam</span>
+                        </div>
+                        <h3 class="course-title">Polytechnic Preparation</h3>
+                        <p class="course-desc">Specialized coaching for students aiming to qualify for Polytechnic entrance examinations with strong foundations in Mathematics and Science.</p>
+                        
+                        <ul class="course-topics">
+                            <li><i class="fas fa-check"></i> Entrance-Specific Math &amp; Science Syllabus</li>
+                            <li><i class="fas fa-check"></i> Speed &amp; Accuracy Training for Objective Tests</li>
+                            <li><i class="fas fa-check"></i> Solved Practice Sets &amp; Mock Tests</li>
+                            <li><i class="fas fa-check"></i> Guidance for Exam Strategy</li>
+                        </ul>
+                    </div>
+
+                    <div class="course-footer">
+                        <div class="course-faculty">
+                            <i class="fas fa-user-check"></i> Nawlesh Sir
+                        </div>
+                        <a href="#contact" class="btn btn-secondary btn-sm">Inquire Batch</a>
+                    </div>
+                </div>
+
+                <!-- Course 7: ITI -->
+                <div class="course-card reveal-on-scroll">
+                    <div class="course-card-top">
+                        <div class="course-badge-row">
+                            <span class="course-level">Career / Entrance</span>
+                            <span class="course-board">Entrance Exam</span>
+                        </div>
+                        <h3 class="course-title">ITI Preparation</h3>
+                        <p class="course-desc">Dedicated guidance and conceptual preparation for students seeking admission into technical ITI courses and trade entrance assessments.</p>
+                        
+                        <ul class="course-topics">
+                            <li><i class="fas fa-check"></i> Core Mathematical Fundamentals &amp; Calculations</li>
+                            <li><i class="fas fa-check"></i> General Science &amp; Technical Basics</li>
+                            <li><i class="fas fa-check"></i> Objective Test Questions &amp; Practice Sets</li>
+                            <li><i class="fas fa-check"></i> Exam Mentorship &amp; Support</li>
+                        </ul>
+                    </div>
+
+                    <div class="course-footer">
+                        <div class="course-faculty">
+                            <i class="fas fa-user-check"></i> Nawlesh Sir
+                        </div>
+                        <a href="#contact" class="btn btn-secondary btn-sm">Inquire Batch</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- 5. Why Future Academy Section -->
+    <section class="section section-subtle" id="why-us">
+        <div class="container">
+            <div class="section-header reveal-on-scroll">
+                <div class="section-badge">Our Pedagogy</div>
+                <h2 class="section-title">Why Students Choose Future Academy</h2>
+                <p class="section-description">We combine disciplined coaching, personal attention, and consistent evaluation to help each student excel.</p>
+            </div>
 
+            <div class="why-grid">
+                <div class="why-card reveal-on-scroll">
+                    <div class="why-number">01</div>
+                    <h3>Concept-Driven Teaching</h3>
+                    <p>Every topic starts with fundamental logic and real-world clarity before advancing to complex problems.</p>
+                </div>
 
-     <!-- Image Slider Section -->
-     <section class="slider-section">
-         <div class="slider-container">
-             <div class="slider">
-                 <!-- Slides -->
-                 <div class="slide active">
-                     <img src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&w=1200&h=400&fit=crop" alt="Modern Learning Environment">
-                 </div>
-                 <div class="slide">
-                     <img src="https://images.pexels.com/photos/4778611/pexels-photo-4778611.jpeg?auto=compress&w=1200&h=400&fit=crop" alt="Digital Learning">
-                 </div>
-                 <div class="slide">
-                     <img src="https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg?auto=compress&w=1200&h=400&fit=crop" alt="Campus Life">
-                 </div>
-                 <div class="slide">
-                     <img src="https://images.pexels.com/photos/5212326/pexels-photo-5212326.jpeg?auto=compress&w=1200&h=400&fit=crop" alt="Study Group">
-                 </div>
-                 <div class="slide">
-                     <img src="https://images.pexels.com/photos/5212703/pexels-photo-5212703.jpeg?auto=compress&w=1200&h=400&fit=crop" alt="Future of Learning">
-                 </div>
-             </div>
- 
-             <!-- Navigation Arrows -->
-             <button class="slider-nav prev">
-                 <i class="fas fa-chevron-left"></i>
-             </button>
-             <button class="slider-nav next">
-                 <i class="fas fa-chevron-right"></i>
-             </button>
- 
-             <!-- Bullet Indicators -->
-             <div class="slider-bullets">
-                 <button class="bullet active">
-                     <div class="progress"></div>
-                 </button>
-                 <button class="bullet">
-                     <div class="progress"></div>
-                 </button>
-                 <button class="bullet">
-                     <div class="progress"></div>
-                 </button>
-                 <button class="bullet">
-                     <div class="progress"></div>
-                 </button>
-                 <button class="bullet">
-                     <div class="progress"></div>
-                 </button>
-             </div>
-         </div>
-     </section>
-    <!-- Footer -->
+                <div class="why-card reveal-on-scroll">
+                    <div class="why-number">02</div>
+                    <h3>Dedicated Doubt Sessions</h3>
+                    <p>Students can ask questions freely and receive individual guidance to overcome personal learning hurdles.</p>
+                </div>
+
+                <div class="why-card reveal-on-scroll">
+                    <div class="why-number">03</div>
+                    <h3>Targeted Board Strategy</h3>
+                    <p>Focused revision series, formula sheets, and past question analysis tailored specifically for BSEB &amp; CBSE.</p>
+                </div>
+
+                <div class="why-card reveal-on-scroll">
+                    <div class="why-number">04</div>
+                    <h3>Accessible Local Coaching</h3>
+                    <p>Conveniently located at Isuapur Bajar, offering high-quality academic mentoring close to home.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Faculty Showcase Section -->
+    <section class="section" id="faculty">
+        <div class="container">
+            <div class="section-header reveal-on-scroll">
+                <div class="section-badge">Faculty Spotlight</div>
+                <h2 class="section-title">Meet Your Teacher</h2>
+                <p class="section-description">Dedicated educator committed to your conceptual clarity and academic milestones.</p>
+            </div>
+
+            <div class="faculty-wrapper reveal-on-scroll">
+                <div class="faculty-grid">
+                    <div class="faculty-image-box">
+                        <img src="images/nawleshsir.jpg" alt="Nawlesh Sir - Mathematics and Science Teacher" class="faculty-image">
+                        <div class="faculty-badge">
+                            <i class="fas fa-certificate"></i> 10+ Years Teaching Experience
+                        </div>
+                    </div>
+
+                    <div class="faculty-info">
+                        <h3 class="faculty-name">Nawlesh Sir</h3>
+                        <p class="faculty-role">Lead Faculty &bull; Mathematics &amp; Science Specialist</p>
+
+                        <p class="faculty-bio">
+                            With over a decade of dedicated teaching experience, Nawlesh Sir has guided hundreds of students across Isuapur in mastering Mathematics and Science. His structured teaching style emphasizes conceptual clarity, systematic derivations, and formula application.
+                        </p>
+
+                        <div class="faculty-specs">
+                            <div class="spec-item">
+                                <h5>Specialization</h5>
+                                <p>Mathematics &amp; Science</p>
+                            </div>
+                            <div class="spec-item">
+                                <h5>Target Levels</h5>
+                                <p>Class 8th to 12th (BSEB / CBSE)</p>
+                            </div>
+                            <div class="spec-item">
+                                <h5>Center Location</h5>
+                                <p>1st Floor, Isuapur Bajar, Bihar</p>
+                            </div>
+                            <div class="spec-item">
+                                <h5>Experience</h5>
+                                <p>10+ Years of Mentoring</p>
+                            </div>
+                        </div>
+
+                        <div class="faculty-socials">
+                            <a href="https://youtube.com/@nawleshsirofficial?si=Ry_-7fsEA4RZ3Y3a" target="_blank" rel="noopener noreferrer" class="social-icon-btn youtube" title="YouTube Channel" aria-label="YouTube Channel">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://www.instagram.com/futureacademy.nawlesh_sir/" target="_blank" rel="noopener noreferrer" class="social-icon-btn instagram" title="Instagram Profile" aria-label="Instagram Profile">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://x.com/NawleshSir?t=JOdcvDkFOIEE5K9qgRf5kw&s=08" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="Twitter Profile" aria-label="Twitter Profile">
+                                <i class="fab fa-x-twitter"></i>
+                            </a>
+                            <a href="https://www.facebook.com/share/18ijftHaZ4/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="Facebook Page" aria-label="Facebook Page">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Digital Learning & YouTube Hub -->
+    <section class="section section-subtle" id="learning-hub">
+        <div class="container">
+            <div class="channel-box reveal-on-scroll">
+                <div class="channel-content">
+                    <div class="section-badge">Digital Learning</div>
+                    <h3>Learn Anywhere with Nawlesh Sir on YouTube</h3>
+                    <p>
+                        Supplement your classroom learning with video lessons, numerical explanations, and chapter revisions available on the official <strong>@nawleshsirofficial</strong> channel.
+                    </p>
+                    <a href="https://youtube.com/@nawleshsirofficial?si=Ry_-7fsEA4RZ3Y3a" target="_blank" rel="noopener noreferrer" class="btn btn-accent btn-lg">
+                        <i class="fab fa-youtube"></i> Visit Official YouTube Channel
+                    </a>
+                </div>
+
+                <div class="channel-preview">
+                    <div class="yt-logo-badge">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <div class="channel-handle">@nawleshsirofficial</div>
+                    <p class="channel-subtext">Free Educational Videos &amp; Conceptual Walkthroughs</p>
+                    <a href="https://youtube.com/@nawleshsirofficial?si=Ry_-7fsEA4RZ3Y3a" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="width: 100%;">
+                        <i class="fas fa-play"></i> Watch Lectures
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Final Call to Action -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <div class="cta-banner reveal-on-scroll">
+                <div class="cta-content">
+                    <h2 class="cta-title">Start Your Journey with Future Academy</h2>
+                    <p class="cta-desc">
+                        Batch admissions and inquiries are now open for Class 8th to 12th, 10th &amp; 12th Board Crash Courses, ITI, and Polytechnic. Connect with our center directly for schedules and enrollment.
+                    </p>
+
+                    <div class="cta-buttons">
+                        <a href="https://wa.me/919309323018" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg">
+                            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                        </a>
+                        <a href="tel:+919309323018" class="btn btn-primary btn-lg">
+                            <i class="fas fa-phone-alt"></i> Call: +91 9309323018
+                        </a>
+                        <a href="mailto:nawleshsir@gmail.com" class="btn btn-secondary btn-lg">
+                            <i class="fas fa-envelope"></i> Email Inquiries
+                        </a>
+                    </div>
+
+                    <div>
+                        <a href="https://maps.app.goo.gl/1eFw1gsszNsvboUR7?g_st=ac" target="_blank" rel="noopener noreferrer" class="cta-address" title="Open Google Maps Location">
+                            <i class="fas fa-map-marker-alt"></i> 1st Floor, Isuapur Bajar, Near KYP, Saran, Bihar &ndash; 841411 &bull; <strong>Get Directions</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Footer -->
     <footer class="footer">
-        <div class="footer-container">
+        <div class="container">
             <div class="footer-grid">
-                <div class="footer-column">
-                    <h3>Future Academy</h3>
-                    <p>Empowering students with interactive learning tools and resources to excel in their academic journey.</p>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/share/18ijftHaZ4/" class="social-link" aria-label="Facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://x.com/NawleshSir?t=JOdcvDkFOIEE5K9qgRf5kw&s=08" class="social-link" aria-label="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="https://www.instagram.com/futureacademy.nawlesh_sir/" class="social-link" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://youtube.com/@nawleshsirofficial?si=Ry_-7fsEA4RZ3Y3a" class="social-link" aria-label="YouTube">
+                <!-- Col 1: Brand -->
+                <div class="footer-col footer-brand">
+                    <a href="index.html" class="brand-logo" style="margin-bottom: 1rem; display: inline-flex;">
+                        <div class="brand-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="brand-text">Future<span>Academy</span></div>
+                    </a>
+                    <p class="footer-bio">
+                        Empowering students with concept-driven coaching in Mathematics &amp; Science (Class 8th–12th, Board Crash Courses, ITI &amp; Polytechnic) in Isuapur, Bihar.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="https://youtube.com/@nawleshsirofficial?si=Ry_-7fsEA4RZ3Y3a" target="_blank" rel="noopener noreferrer" class="social-icon-btn youtube" aria-label="YouTube">
                             <i class="fab fa-youtube"></i>
                         </a>
+                        <a href="https://www.instagram.com/futureacademy.nawlesh_sir/" target="_blank" rel="noopener noreferrer" class="social-icon-btn instagram" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://x.com/NawleshSir?t=JOdcvDkFOIEE5K9qgRf5kw&s=08" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Twitter">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="https://www.facebook.com/share/18ijftHaZ4/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="footer-column">
+
+                <!-- Col 2: Navigation Links -->
+                <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="study-materials.html">Study Materials</a></li>
-                        <li><a href="classes.html">Classes</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="forum.html">Community Forums</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#courses">Academic Courses</a></li>
+                        <li><a href="#why-us">Why Future Academy</a></li>
+                        <li><a href="#faculty">Faculty &bull; Nawlesh Sir</a></li>
+                        <li><a href="#learning-hub">YouTube Learning Hub</a></li>
                         <li><a href="about-developer.html">About Developer</a></li>
                     </ul>
                 </div>
-                <div class="footer-column">
-                    <h4>Contact Us</h4>
-                    <ul class="contact-info">
-                        <li href="mailto:nawleshsir@gmail.com">
+
+                <!-- Col 3: Contact Details -->
+                <div class="footer-col">
+                    <h4>Center Information</h4>
+                    <ul class="footer-contact-list">
+                        <li class="footer-contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <strong>Phone / Inquiries:</strong><br>
+                                <a href="tel:+919309323018">+91 9309323018</a>
+                            </div>
+                        </li>
+                        <li class="footer-contact-item">
                             <i class="fas fa-envelope"></i>
-                            nawleshsir@gmail.com
+                            <div>
+                                <strong>Email:</strong><br>
+                                <a href="mailto:nawleshsir@gmail.com">nawleshsir@gmail.com</a>
+                            </div>
                         </li>
-                        <li href="tel:+919309323018">
-                            <i class="fas fa-phone"></i>
-                            91+ 9309323018
-                        </li>
-                        <li>
+                        <li class="footer-contact-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            Ishuapur Bajar, Near KYP, 841411
+                            <div>
+                                <strong>Address:</strong><br>
+                                <a href="https://maps.app.goo.gl/1eFw1gsszNsvboUR7?g_st=ac" target="_blank" rel="noopener noreferrer" style="color: var(--text-muted);">
+                                    1st Floor, Isuapur Bajar, Near KYP, Saran, Bihar &ndash; 841411<br>
+                                    <span style="color: var(--primary); font-size: 0.85rem;"><i class="fas fa-location-arrow"></i> View on Google Maps</span>
+                                </a>
+                            </div>
                         </li>
                     </ul>
                 </div>
-                <div class="footer-column">
-                    <h4>Newsletter</h4>
-                    <p>Subscribe to our newsletter for updates and learning tips.</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Enter your email" required>
-                        <button type="submit">Subscribe</button>
-                    </form>
-                </div>
             </div>
+
+            <!-- Footer Bottom -->
             <div class="footer-bottom">
-                <p>&copy; 2024 Future Academy. All rights reserved.</p>
+                <p>&copy; <span id="current-year">2026</span> Future Academy. All rights reserved.</p>
+                <p>Designed with care by <a href="about-developer.html">Vishal Gupta</a></p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript Files -->
-    <script src="js/main.js"></script>
-    <script src="js/darkmode.js"></script>
-    <script src="js/animations.js"></script>
-    <script src="js/auth.js"></script>
-    <script src="js/slider.js"></script>
+    <!-- Mobile Floating Quick Contact Bar (Active on Mobile <= 768px) -->
+    <aside class="mobile-action-bar" aria-label="Quick Mobile Actions">
+        <a href="https://wa.me/919309323018" target="_blank" rel="noopener noreferrer" class="mobile-bar-btn btn-whatsapp-bar" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+        <a href="tel:+919309323018" class="mobile-bar-btn btn-call-bar" aria-label="Call Academy">
+            <i class="fas fa-phone-alt"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://maps.app.goo.gl/1eFw1gsszNsvboUR7?g_st=ac" target="_blank" rel="noopener noreferrer" class="mobile-bar-btn btn-maps-bar" aria-label="View Map & Directions">
+            <i class="fas fa-location-dot"></i>
+            <span>Directions</span>
+        </a>
+    </aside>
 
+    <!-- Minimal Dedicated Landing Page JavaScript -->
+    <script src="js/landing.js"></script>
+    <script>
+        // Update copyright year dynamically
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
-</html> 
+</html>

@@ -1,222 +1,272 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Future Academy - About Developer - Meet the developer behind Future Academy">
-    <title>Future Academy - About Developer</title>
+    <meta name="description" content="About Vishal Gupta - Full Stack Developer and creator of the Future Academy web platform.">
+    <meta name="keywords" content="Vishal Gupta, Web Developer, Full Stack Developer, Future Academy Developer, Veer">
+    <meta name="author" content="Vishal Gupta">
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="About Developer | Vishal Gupta - Future Academy">
+    <meta property="og:description" content="Meet Vishal Gupta, the full stack developer behind Future Academy.">
+    <meta property="og:type" content="profile">
+    <meta property="og:image" content="images/developer.jpeg">
+
+    <title>About Developer | Vishal Gupta - Future Academy</title>
+
+    <!-- Brand Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/pages/home.css">
     <link rel="stylesheet" href="css/pages/about-developer.css">
-    <link rel="stylesheet" href="css/darkmode.css">
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body>
-    <!-- Modern Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-left">
-                <a href="https://webstar-vishalgupta.github.io/Future-Academy/" class="logo">Future Academy</a>
-                <a href="login.html" class="login-btn">Log In</a>
-            </div>
-            <div class="nav-right">
-                <button class="mobile-menu-btn">
+
+    <!-- 1. Navigation Bar -->
+    <nav class="navbar" id="navbar" aria-label="Main Navigation">
+        <div class="container nav-container">
+            <!-- Brand Identity -->
+            <a href="index.html" class="brand-logo" aria-label="Future Academy Home">
+                <div class="brand-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="brand-text">Future<span>Academy</span></div>
+            </a>
+
+            <!-- Navigation Links -->
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#courses" class="nav-link">Courses</a></li>
+                <li><a href="index.html#why-us" class="nav-link">Why Us</a></li>
+                <li><a href="index.html#faculty" class="nav-link">Faculty</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="about-developer.html" class="nav-link active">About Developer</a></li>
+            </ul>
+
+            <!-- Navigation Actions (Theme Toggle & CTA) -->
+            <div class="nav-actions">
+                <button type="button" class="theme-toggle-btn" id="theme-toggle" aria-label="Switch theme">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+
+                <a href="index.html#contact" class="btn btn-primary btn-sm">
+                    <i class="fas fa-paper-plane"></i> Contact Us
+                </a>
+
+                <button type="button" class="mobile-toggle-btn" id="mobile-toggle-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
                     <i class="fas fa-bars"></i>
                 </button>
-                <div class="nav-links">
-                    <a href="index.html" class="nav-link">Home</a>
-                    <a href="study-materials.html" class="nav-link">Study Materials</a>
-                    <a href="classes.html" class="nav-link">Classes</a>
-                    <a href="contact.html" class="nav-link">Contact Us</a>
-                    <a href="forum.html" class="nav-link">Community Forums</a>
-                    <a href="about-developer.html" class="nav-link active">About Developer</a>
-                    <div class="theme-toggle">
-                        <input type="checkbox" id="dark-mode-toggle">
-                        <label for="dark-mode-toggle">
-                            <i class="fas fa-sun"></i>
-                            <i class="fas fa-moon"></i>
-                        </label>
-                    </div>
-                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero developer-hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>About the Developer</h1>
-                <p>Meet the passionate developer behind Future Academy who is dedicated to creating innovative educational solutions.</p>
+    <!-- 2. Hero Header -->
+    <header class="dev-hero">
+        <div class="container">
+            <div class="dev-hero-badge reveal-on-scroll">
+                <i class="fas fa-code"></i> Engineering &amp; Design
+            </div>
+            <h1 class="reveal-on-scroll">About the Developer</h1>
+            <p class="reveal-on-scroll">
+                Meet the engineer behind the digital experience of Future Academy, crafting modern, performant, and accessible web solutions.
+            </p>
+        </div>
+    </header>
+
+    <!-- 3. Developer Profile Section -->
+    <main class="dev-section">
+        <div class="container">
+            <!-- Profile Card -->
+            <div class="dev-profile-card reveal-on-scroll">
+                <div class="dev-avatar-container">
+                    <img src="images/developer.jpeg" alt="Vishal Gupta - Full Stack Developer" class="dev-avatar">
+                    <div class="dev-avatar-badge">
+                        <span class="dot"></span> Open for Projects
+                    </div>
+                </div>
+
+                <div class="dev-main-info">
+                    <h2>Vishal Gupta</h2>
+                    <span class="dev-role">Full Stack Developer &bull; Web &amp; Security Enthusiast</span>
+                    <p class="dev-intro">
+                        Passionate software developer dedicated to architecting clean, scalable, and responsive digital products. Focused on crafting seamless user experiences with modern front-end technologies and robust back-end systems.
+                    </p>
+
+                    <div class="dev-social-grid">
+                        <a href="https://github.com/dev-vishalgupta" target="_blank" rel="noopener noreferrer" class="dev-social-btn github" aria-label="GitHub Profile">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="mailto:vishalgupta@angelmindai.com" class="dev-social-btn" aria-label="Email Vishal">
+                            <i class="fas fa-envelope"></i> Email
+                        </a>
+                        <a href="https://www.instagram.com/dev.vishalgupta/" target="_blank" rel="noopener noreferrer" class="dev-social-btn instagram" aria-label="Instagram Profile">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <a href="https://t.me/webstar_forever" target="_blank" rel="noopener noreferrer" class="dev-social-btn telegram" aria-label="Telegram Channel">
+                            <i class="fab fa-telegram-plane"></i> Telegram
+                        </a>
+                        <a href="https://www.youtube.com/@VeersWave" target="_blank" rel="noopener noreferrer" class="dev-social-btn youtube" aria-label="YouTube Channel">
+                            <i class="fab fa-youtube"></i> YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Two-Column Details -->
+            <div class="dev-grid-two">
+                <!-- Column 1: Technical Stack -->
+                <div class="dev-card-box reveal-on-scroll">
+                    <h3><i class="fas fa-layer-group"></i> Core Tech Stack</h3>
+                    <div class="skills-pill-grid">
+                        <div class="skill-pill"><i class="fab fa-html5"></i> HTML5</div>
+                        <div class="skill-pill"><i class="fab fa-css3-alt"></i> CSS3 &amp; SASS</div>
+                        <div class="skill-pill"><i class="fab fa-js"></i> JavaScript (ES6+)</div>
+                        <div class="skill-pill"><i class="fab fa-react"></i> React.js</div>
+                        <div class="skill-pill"><i class="fab fa-node-js"></i> Node.js &amp; Express</div>
+                        <div class="skill-pill"><i class="fas fa-database"></i> MongoDB &amp; SQL</div>
+                        <div class="skill-pill"><i class="fab fa-google"></i> Firebase</div>
+                        <div class="skill-pill"><i class="fab fa-git-alt"></i> Git &amp; GitHub</div>
+                        <div class="skill-pill"><i class="fas fa-shield-halved"></i> Web Security</div>
+                    </div>
+                </div>
+
+                <!-- Column 2: Featured Projects -->
+                <div class="dev-card-box reveal-on-scroll">
+                    <h3><i class="fas fa-laptop-code"></i> Featured Work</h3>
+                    <div class="project-item">
+                        <h4>Future Academy Platform</h4>
+                        <p>Modern, responsive academic coaching platform built with semantic HTML, custom design system, light/dark theme persistence, and optimized user flows.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML5/CSS3</span>
+                            <span class="project-tag">Vanilla JS</span>
+                            <span class="project-tag">Responsive Design</span>
+                            <span class="project-tag">UI/UX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Banner -->
+            <div class="notion-banner reveal-on-scroll">
+                <div class="notion-text">
+                    <h4>Want to know more about my work?</h4>
+                    <p>Explore my full portfolio, featured case studies, and engineering projects.</p>
+                </div>
+                <a href="https://dev.angelmindai.com/portfolio.html" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+                    <i class="fas fa-arrow-up-right-from-square"></i> View Portfolio
+                </a>
             </div>
         </div>
-    </section>
+    </main>
 
-    <!-- Developer Section -->
-    <section class="developer-section">
-        <div class="developer-container">
-            <div class="developer-profile">
-                <div class="profile-image">
-                    <img src="images/developer.jpeg" alt="Developer Profile">
-                </div>
-                <div class="profile-content">
-                    <h2>Vishal Gupta</h2>
-                    <p class="title">Full Stack Developer</p>
-                    <div class="social-links">
-                        <a href="https://github.com/webstar-vishalgupta" target="_blank" class="social-link" title="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="mailto:webstar.infosec@gmail.com" class="social-link" title="Email">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                        <a href="https://www.instagram.com/webstar_vishalgupta/" target="_blank" class="social-link" title="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://t.me/webstar_forever" target="_blank" class="social-link" title="Telegram">
-                            <i class="fab fa-telegram"></i>
-                        </a>
-                        <a href="https://www.youtube.com/@VeersWave" target="_blank" class="social-link" title="YouTube">
+    <!-- 4. Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Col 1: Brand -->
+                <div class="footer-col footer-brand">
+                    <a href="index.html" class="brand-logo" style="margin-bottom: 1rem; display: inline-flex;">
+                        <div class="brand-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="brand-text">Future<span>Academy</span></div>
+                    </a>
+                    <p class="footer-bio">
+                        Empowering students with concept-driven coaching in Mathematics &amp; Science (Class 8th–12th, Board Crash Courses, ITI &amp; Polytechnic) in Isuapur, Bihar.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="https://youtube.com/@nawleshsirofficial?si=Ry_-7fsEA4RZ3Y3a" target="_blank" rel="noopener noreferrer" class="social-icon-btn youtube" aria-label="YouTube">
                             <i class="fab fa-youtube"></i>
                         </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="developer-info">
-                <div class="info-section">
-                    <h3>About Me</h3>
-                    <p>I am a passionate Full Stack Developer with expertise in creating modern web applications. My journey in web development started with a curiosity to build things that make a difference in people's lives.</p>
-                </div>
-
-                <div class="info-section">
-                    <h3>Skills</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <i class="fab fa-html5"></i>
-                            <span>HTML5</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-css3-alt"></i>
-                            <span>CSS3</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-js"></i>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-react"></i>
-                            <span>React</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-node"></i>
-                            <span>Node.js</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-database"></i>
-                            <span>SQL</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="info-section">
-                    <h3>Projects</h3>
-                    <div class="projects-grid">
-                        <div class="project-card">
-                            <h4>Future Academy</h4>
-                            <p>A comprehensive educational platform designed to enhance learning experiences.</p>
-                        </div>
-                        <!-- Add more project cards as needed -->
-                    </div>
-                </div>
-
-                <div class="more-about-section">
-                    <a href="https://economic-marmot-0f9.notion.site/Veer-Unveiled-157a9ecead818030ae92c3e41b7137f3" target="_blank" class="more-about-btn">
-                        More About Me
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Back Button Section -->
-    <section class="back-section">
-        <div class="container">
-            <button onclick="history.back()" class="back-btn">
-                <i class="fas fa-arrow-left"></i> Back
-            </button>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-grid">
-                <div class="footer-column">
-                    <h3>Future Academy</h3>
-                    <p>Empowering students with interactive learning tools and resources to excel in their academic journey.</p>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/share/18ijftHaZ4/" class="social-link" aria-label="Facebook">
+                        <a href="https://www.instagram.com/futureacademy.nawlesh_sir/" target="_blank" rel="noopener noreferrer" class="social-icon-btn instagram" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://x.com/NawleshSir?t=JOdcvDkFOIEE5K9qgRf5kw&s=08" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Twitter">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="https://www.facebook.com/share/18ijftHaZ4/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="https://x.com/NawleshSir?t=JOdcvDkFOIEE5K9qgRf5kw&s=08" class="social-link" aria-label="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="https://www.instagram.com/futureacademy.nawlesh_sir/" class="social-link" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://youtube.com/@nawleshsirofficial?si=Ry_-7fsEA4RZ3Y3a" class="social-link" aria-label="YouTube">
-                            <i class="fab fa-youtube"></i>
-                        </a>
                     </div>
                 </div>
-                <div class="footer-column">
+
+                <!-- Col 2: Navigation Links -->
+                <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="study-materials.html">Study Materials</a></li>
-                        <li><a href="classes.html">Classes</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="forum.html">Community Forums</a></li>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#courses">Academic Courses</a></li>
+                        <li><a href="index.html#why-us">Why Future Academy</a></li>
+                        <li><a href="index.html#faculty">Faculty &bull; Nawlesh Sir</a></li>
+                        <li><a href="index.html#learning-hub">YouTube Learning Hub</a></li>
                         <li><a href="about-developer.html">About Developer</a></li>
                     </ul>
                 </div>
-                <div class="footer-column">
-                    <h4>Contact Us</h4>
-                    <ul class="contact-info">
-                        <li href="mailto:nawleshsir@gmail.com">
+
+                <!-- Col 3: Contact Details -->
+                <div class="footer-col">
+                    <h4>Center Information</h4>
+                    <ul class="footer-contact-list">
+                        <li class="footer-contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <strong>Phone / Inquiries:</strong><br>
+                                <a href="tel:+919309323018">+91 9309323018</a>
+                            </div>
+                        </li>
+                        <li class="footer-contact-item">
                             <i class="fas fa-envelope"></i>
-                            nawleshsir@gmail.com
+                            <div>
+                                <strong>Email:</strong><br>
+                                <a href="mailto:nawleshsir@gmail.com">nawleshsir@gmail.com</a>
+                            </div>
                         </li>
-                        <li href="tel:+919309323018">
-                            <i class="fas fa-phone"></i>
-                            91+ 9309323018
-                        </li>
-                        <li>
+                        <li class="footer-contact-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            Ishuapur Bajar, Near KYP, 841411
+                            <div>
+                                <strong>Address:</strong><br>
+                                <a href="https://maps.app.goo.gl/1eFw1gsszNsvboUR7?g_st=ac" target="_blank" rel="noopener noreferrer" style="color: var(--text-muted);">
+                                    1st Floor, Isuapur Bajar, Near KYP, Saran, Bihar &ndash; 841411<br>
+                                    <span style="color: var(--primary); font-size: 0.85rem;"><i class="fas fa-location-arrow"></i> View on Google Maps</span>
+                                </a>
+                            </div>
                         </li>
                     </ul>
                 </div>
-                <div class="footer-column">
-                    <h4>Newsletter</h4>
-                    <p>Subscribe to our newsletter for updates and learning tips.</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Enter your email" required>
-                        <button type="submit">Subscribe</button>
-                    </form>
-                </div>
             </div>
+
+            <!-- Footer Bottom -->
             <div class="footer-bottom">
-                <p>&copy; 2024 Future Academy. All rights reserved.</p>
+                <p>&copy; <span id="current-year">2026</span> Future Academy. All rights reserved.</p>
+                <p>Designed with care by <a href="about-developer.html">Vishal Gupta</a></p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript Files -->
-    <script src="js/main.js"></script>
-    <script src="js/darkmode.js"></script>
-    <script src="js/animations.js"></script>
-    <script src="js/auth.js"></script>
+    <!-- Mobile Floating Quick Contact Bar (Active on Mobile <= 768px) -->
+    <aside class="mobile-action-bar" aria-label="Quick Mobile Actions">
+        <a href="https://wa.me/919309323018" target="_blank" rel="noopener noreferrer" class="mobile-bar-btn btn-whatsapp-bar" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+        <a href="tel:+919309323018" class="mobile-bar-btn btn-call-bar" aria-label="Call Academy">
+            <i class="fas fa-phone-alt"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://maps.app.goo.gl/1eFw1gsszNsvboUR7?g_st=ac" target="_blank" rel="noopener noreferrer" class="mobile-bar-btn btn-maps-bar" aria-label="View Map & Directions">
+            <i class="fas fa-location-dot"></i>
+            <span>Directions</span>
+        </a>
+    </aside>
+
+    <!-- Minimal Dedicated Landing Page JavaScript -->
+    <script src="js/landing.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
-</html> 
+</html>
